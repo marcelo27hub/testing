@@ -3,7 +3,7 @@ import pytest
 
 """para realizar las pruebas unitarias. Cada función de prueba verifica 
 un caso específico de la función sumar, asegurando que el resultado sea el esperado."""
-from app import sumar
+from pruebas.test.app import sumar
 
 #creamos funciones para probar la función sumar con diferentes casos de prueba.
 def test_sumar():
