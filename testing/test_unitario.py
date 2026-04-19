@@ -2,7 +2,7 @@
 import pytest
 
 #importo la funcion validar_mensaje para probarla
-from test_validacion import validar_mensaje
+from funcion_validacion import validar_mensaje
 
 def test_validar_mensaje():
 
