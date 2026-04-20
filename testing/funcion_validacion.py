@@ -11,3 +11,7 @@ def validar_mensaje(mensaje):
     
     return True
 
+#funcion refactorizada 
+def ref_validar_mensaje(texto: str) -> bool:
+    mensaje = texto.strip()
+    return bool(mensaje) and len(mensaje) <= 200
