@@ -130,6 +130,9 @@ def iniciar_servidor():
                             nombre = clientes[socket_notificado]
                             texto = mensaje.decode().strip()
 
+                            if not texto:
+                                continue
+
                             print(f"{nombre}: {texto}") 
 
                             # manejar comando primero
