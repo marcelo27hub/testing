@@ -5,6 +5,7 @@ Servidor	Persona que abre la puerta y recibe al invitado"""
 import socket #enchufe virtual 
 import select #para monitorear multiples sockets
 import threading
+from funcion_validacion import ref_validar_mensaje as validar_mensaje
 
 IP_LOCAL= '127.0.0.1' #solo mi computadora
 PUERTO = 5000  # un canal de comunicación específico dentro de una computadora.
@@ -130,9 +131,10 @@ def iniciar_servidor():
                             nombre = clientes[socket_notificado]
                             texto = mensaje.decode().strip()
 
-                            if not texto:
+                            if not validar_mensaje(texto):
                                 continue
 
+                
                             print(f"{nombre}: {texto}") 
 
                             # manejar comando primero
